@@ -1,0 +1,51 @@
+server:
+  port: 8080
+spring:
+  application:
+    name: customer
+  datasource:
+    username: postgres
+    password: root
+    url: jdbc:postgresql://localhost:5332/customer
+  jpa:
+    hibernate:
+      ddl-auto: create-drop
+    properties:
+      hibernate:
+        dialect: org.hibernate.dialect.PostgreSQLDialect
+        format_sql: true
+    show-sql: true
+  mail:
+    host: smtp.gmail.com
+    port: 587
+    username: "daniil19020@gmail.com"
+    password: "xeaf ejbu ewbg whxf"
+    properties:
+      mail:
+        smtp:
+          auth: true
+          starttls:
+            enable: true
+  kafka:
+    bootstrap-servers: "localhost:9092"
+
+jwt:
+  secret:
+    key: "404E635266556A586E3272357538782F413F4428472B4B6250645367566B5970"
+
+
+#rabbitmq:
+#  exchanges:
+#    internal: internal.exchange
+#  queues:
+#    email: email.queue
+#  routing-keys:
+#    internal-email: internal.email.routing-key
+
+eureka:
+  client:
+    service-url:
+      defaultZone: http://localhost:8761/eureka
+    fetch-registry: true
+    register-with-eureka: true
+
