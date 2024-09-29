@@ -27,7 +27,6 @@ public class CustomerService {
     private final CustomerDao customerDao;
     private final PasswordEncoder passwordEncoder;
     private final AuthenticationManager authenticationManager;
-    private final EmailService emailService;
     private final JwtService jwtService;
     private final KafkaTemplate<String, CustomerMessage> kafkaTemplate;
 
